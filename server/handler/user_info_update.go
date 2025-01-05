@@ -12,7 +12,7 @@ import (
 )
 
 type RequestUserInfoUpdate struct {
-	Email string `json:"email" validate:"required"`
+	Email string `json:"email" validate:"optional"`
 	Name  string `json:"name" validate:"required"`
 	Link  string `json:"link" validate:"optional"`
 	Code  string `json:"code" validate:"optional"`

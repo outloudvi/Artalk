@@ -12,7 +12,7 @@ import (
 
 type ParamsUserUpdate struct {
 	Name         string `json:"name" validate:"required"`          // The user name
-	Email        string `json:"email" validate:"required"`         // The user email
+	Email        string `json:"email" validate:"optional"`         // The user email
 	Password     string `json:"password" validate:"optional"`      // The user password
 	Link         string `json:"link" validate:"optional"`          // The user link
 	IsAdmin      bool   `json:"is_admin" validate:"required"`      // The user is an admin
