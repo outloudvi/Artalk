@@ -15,6 +15,11 @@ func (pusher *NotifyPusher) checkNeedSendEmailToUser(comment *entity.Comment, pa
 		return false
 	}
 
+	// 用户未填邮件不提醒
+	if pusher.dao.FetchUserForComment(parentComment).Email == "" {
+		return false
+	}
+
 	// 对方个人设定关闭邮件接收
 	if !pusher.dao.FetchUserForComment(parentComment).ReceiveEmail {
 		return false
