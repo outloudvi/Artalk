@@ -138,7 +138,7 @@ function submit() {
     <form v-if="editUser" class="atk-form" @submit.prevent="submit()">
       <div class="atk-label required">{{ t('username') }}</div>
       <input v-model="editUser.name" type="text" placeholder="" autocomplete="off" />
-      <div class="atk-label required">{{ t('email') }}</div>
+      <div class="atk-label">{{ t('email') }}</div>
       <input v-model="editUser.email" type="text" placeholder="" autocomplete="off" />
       <div class="atk-label">{{ t('link') }}</div>
       <input v-model="editUser.link" type="text" placeholder="" autocomplete="off" />
