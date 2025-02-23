@@ -1,4 +1,48 @@
 
+## [v2.10.0](https://github.com/ArtalkJS/Artalk/compare/v2.9.1...v2.10.0) (2025-02-23)
+
+### Features
+
+* extended log/protection for empty email addr
+* mark email in user-related fields optional
+* don't enforce email
+* **api/vote:** add get vote status endpoint ([#998](https://github.com/ArtalkJS/Artalk/issues/998))
+* **config:** enhance config file and data dir retrieval ([#992](https://github.com/ArtalkJS/Artalk/issues/992))
+* **plugins:** add plugin registry fetch script
+* **ui:** add dependency injection container ([#1006](https://github.com/ArtalkJS/Artalk/issues/1006))
+* **ui:** add npm published version check script
+* **ui/conf:** add `preferRemoteConf` option ([#1000](https://github.com/ArtalkJS/Artalk/issues/1000)) ([#1011](https://github.com/ArtalkJS/Artalk/issues/1011))
+* **ui/eslint:** update `eslint-plugin-artalk` to v1.0.2 ([#1010](https://github.com/ArtalkJS/Artalk/issues/1010))
+* **ui/eslint:** add eslint plugin for artalk ui development ([#995](https://github.com/ArtalkJS/Artalk/issues/995))
+* **ui/page_vote:** add page voting feature ([#983](https://github.com/ArtalkJS/Artalk/issues/983))
+
+### Code Refactoring
+
+* **api/vote:** refactor vote http endpoint and logic ([#997](https://github.com/ArtalkJS/Artalk/issues/997))
+* **ui:** improve modularity, lifecycle, and types ([#1007](https://github.com/ArtalkJS/Artalk/issues/1007))
+* **ui/auth:** ensure compatibility with new client types ([#1009](https://github.com/ArtalkJS/Artalk/issues/1009))
+* **ui/comment:** update reply button to use component
+* **ui/conf:** introduce `DeepPartial` type for ui config ([#996](https://github.com/ArtalkJS/Artalk/issues/996))
+* **ui/sidebar:** ensure compatibility with new client types ([#1008](https://github.com/ArtalkJS/Artalk/issues/1008))
+
+### Documentation
+
+* integrate git changelog plugin
+* **i18n:** add `zh-TW` translation for config template
+* **landing:** redesign landing page ([#1020](https://github.com/ArtalkJS/Artalk/issues/1020))
+* **landing:** add more translations
+* **landing:** optimize responsive font size
+
+### BREAKING CHANGE
+
+
+UI client now prioritizes local config in the latest version, whereas previously, the remote config would override it. (See [#1011](https://github.com/ArtalkJS/Artalk/issues/1011))
+
+This update changes the UI client's export Types. Although we aim to maintain backward compatibility, it may still affect downstream UI programs. Please refer to the [TypeDoc](https://artalk.js.org/typedoc/).
+
+Vote HTTP API endpoint have been updated. (See [#997](https://github.com/ArtalkJS/Artalk/issues/997))
+
+
 ## [v2.9.1](https://github.com/ArtalkJS/Artalk/compare/v2.9.0...v2.9.1) (2024-09-18)
 
 ### Features
