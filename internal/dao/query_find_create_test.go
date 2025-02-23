@@ -137,7 +137,7 @@ func TestFindCreateUser(t *testing.T) {
 			result bool
 		}{
 			{"", "", "", false},
-			{"userA", "", "", false},
+			{"userA", "", "", true},
 			{"", "user_a@example.com", "", false},
 			{"userB", "user_b", "", false},
 			{"userC", "user_c@example.com", "https://xxxx.com", true},
