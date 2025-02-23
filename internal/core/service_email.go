@@ -97,6 +97,11 @@ func (e *EmailService) AsyncSend(notify *entity.Notify) {
 
 	log.Debug(time.Now(), " "+receiveUser.Email)
 
+	if receiveUser.Email == "" {
+		log.Debug(time.Now(), "[feat/no-email-enforcement] No email address, skipping notification")
+		return
+	}
+
 	// add email send task to queue
 	e.queue.Push(&email.Email{
 		FromAddr:     e.app.Conf().Email.SendAddr,
