@@ -39,7 +39,7 @@ jobs:
         run: pnpm build
 
       - name: Publish
-        run: pnpm publish -F artalk --no-git-checks ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: pnpm publish -F @ovv/artalk --no-git-checks ${{ inputs.dry_run && '--dry-run' || '' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

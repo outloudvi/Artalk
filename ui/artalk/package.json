@@ -1,5 +1,5 @@
 {
-  "name": "artalk",
+  "name": "@ovv/artalk",
   "version": "2.10.0",
   "description": "A self-hosted comment system",
   "keywords": [
