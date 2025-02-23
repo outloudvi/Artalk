@@ -1,4 +1,11 @@
 
+## [v2.11.1](https://github.com/ArtalkJS/Artalk/compare/v2.11.0...v2.11.1) (2025-02-23)
+
+### Bug Fixes
+
+* don't mandate `email` on user creation
+
+
 ## [v2.11.0](https://github.com/ArtalkJS/Artalk/compare/v2.10.0...v2.11.0) (2025-02-23)
 
 
