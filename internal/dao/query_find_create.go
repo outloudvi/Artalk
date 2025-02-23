@@ -63,10 +63,10 @@ func (dao *Dao) FindCreateUser(name string, email string, link string) (entity.U
 	name = strings.TrimSpace(name)
 	email = strings.TrimSpace(email)
 	link = strings.TrimSpace(link)
-	if name == "" || email == "" {
-		return entity.User{}, fmt.Errorf("name and email are required")
+	if name == "" {
+		return entity.User{}, fmt.Errorf("name is required")
 	}
-	if !utils.ValidateEmail(email) {
+	if email != "" && !utils.ValidateEmail(email) {
 		return entity.User{}, fmt.Errorf("email is invalid")
 	}
 	if link != "" && !utils.ValidateURL(link) {
